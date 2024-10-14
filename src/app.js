@@ -16,9 +16,14 @@ app.use(cookieParser());
 
 // routes import
 import userRouter from "./routes/user.route.js";
+import blogRouter from "./routes/blog.route.js";
 
 // routes declaration
-app.use("/api/v1/user", userRouter)
+
+const ApiVersion = "/api/v1";
+
+app.use(`${ApiVersion}/user`, userRouter)
+app.use(`${ApiVersion}/blog`, blogRouter)
 
 
 /**
