@@ -26,6 +26,13 @@ app.use(`${ApiVersion}/user`, userRouter)
 app.use(`${ApiVersion}/blog`, blogRouter)
 
 
+app.use(`/`, (req, res) => res.send(defaultReturn)); // Use a callback function to send the defaultReturn
+const defaultReturn = {
+    "message": "Hello world from blog-backend"
+}
+
+
+
 /**
  * url :
  */
