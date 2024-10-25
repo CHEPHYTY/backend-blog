@@ -4,7 +4,9 @@ import mongoose from "mongoose";
 import {
     loginUser,
     registerUser,
-    googleAuthentication
+    googleAuthentication,
+    searchUser,
+    getProfile
 }
     from "../controllers/user.controller.js";
 const router = Router();
@@ -13,6 +15,10 @@ const router = Router();
 router.route("/signup").post(registerUser);
 router.route("/signin").post(loginUser);
 router.route("/google-auth").post(googleAuthentication);
+
+router.route("/search-users").post(searchUser)
+
+router.route("/get-profile").post(getProfile)
 // router.
 
 

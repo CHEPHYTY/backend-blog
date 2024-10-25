@@ -20,7 +20,7 @@ import blogRouter from "./routes/blog.routes.js";
 
 // routes declaration
 
-const ApiVersion = "/api/v1";
+const ApiVersion = "/api";
 
 app.use(`${ApiVersion}/user`, userRouter)
 app.use(`${ApiVersion}/blog`, blogRouter)
